@@ -1,0 +1,40 @@
+import React from 'react';
+import styled from 'styled-components';
+import { ReactComponent as Feather } from 'assets/feather.svg';
+
+
+const StyledWrapper = styled.div`
+display:flex;
+flex-direction:row;
+flex-basis:100%;
+align-items:center;
+margin-bottom:30px;
+>:nth-child(2){
+    margin-left:20px;
+.a{
+    fill:${props => props.theme.primary};
+}
+}
+`
+const Head = styled.h1`
+    color: ${props => props.theme.primary};
+    font-size:50px;
+`
+
+
+const UserInfoHead = () => {
+
+
+    return (
+        <>
+            <StyledWrapper>
+                <Head >User Info</Head >
+                <Feather width={60} />
+            </StyledWrapper>
+
+        </>
+
+    )
+}
+
+export default UserInfoHead
