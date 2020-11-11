@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import styled, {css} from 'styled-components';
 import authContext from 'contexts/authContext';
 import themeContext from 'contexts/themeContext';
-import NavItem from 'components/atoms/NavItem'
+import NavItem from 'components/atoms/NavItem';
 
 
 const StyledWrapper = styled.div`
@@ -30,8 +30,7 @@ const StyledWrapper = styled.div`
         text-decoration:underline;
     }
 
-
-`
+`;
 
 const ToogleSwitch = styled.div`
   display:flex;
@@ -116,10 +115,9 @@ const ProfileMenu = () => {
         </ToogleSwitch>
         <StyledLogout onClick={() => context.dispatchAuth({ type: 'LOGOUT', token: '' })}>Log out</StyledLogout>
       </StyledWrapper>
-
     </>
 
   )
 }
 
-export default ProfileMenu
+export default ProfileMenu;

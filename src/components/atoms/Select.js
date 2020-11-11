@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 const Select = styled.select`
   padding: 0.5em;
@@ -13,4 +13,4 @@ const Select = styled.select`
 
 `;
 
-export default Select
+export default Select;

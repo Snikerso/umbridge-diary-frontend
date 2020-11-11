@@ -7,7 +7,6 @@ import Head from 'components/atoms/Head';
 import Input from 'components/atoms/Input';
 import MagItem from 'components/organisms/MagItem';
 import MagHead from 'components/molecules/MagHead';
-
 import { ReactComponent as Hat } from 'assets/hat.svg';
 
 
@@ -16,15 +15,15 @@ const StyledWrapper = styled.div`
     display:grid;
     grid-template-columns:1fr 1fr 1fr ;
     margin-top:20px;
-`
+`;
 const StyledWrapperForm = styled.div`
     display:grid;
     height:300px;
     margin:50px;
-`
+`;
 const StyledWrapperMagsList = styled.div`
     margin-top:100px;
-`
+`;
 const StyledWrapperRandomMag = styled.div`
     display:flex;
     flex-direction:row;
@@ -33,8 +32,7 @@ const StyledWrapperRandomMag = styled.div`
     >:nth-child(2){
         font-size:30px;
     }
-
-`
+`;
 
 const StyledWraperInfo = styled.div`
     display:grid;
@@ -45,7 +43,7 @@ const StyledWraperInfo = styled.div`
     font-size:30px;
     gap:40px;
     margin-top:100px;
-`
+`;
 
 
 
@@ -140,10 +138,6 @@ function UserProgress() {
 
     }
 
-
-
-
-
     return (
         <>
             <StyledWrapper>
@@ -172,11 +166,12 @@ function UserProgress() {
                                 <Hat />
                             </StyledWraperInfo>
                         )}
-                    {stateMag.length > 0 && (
-                        <StyledWrapperRandomMag>
-                            <Button onClick={() => handleRandom()}>Random</Button>
-                            <h3>{randomMag}</h3>
-                        </StyledWrapperRandomMag>)}
+                        {stateMag.length > 0 && (
+                            <StyledWrapperRandomMag>
+                                <Button onClick={() => handleRandom()}>Random</Button>
+                                <h3>{randomMag}</h3>
+                            </StyledWrapperRandomMag>
+                        )}
 
 
 

@@ -56,4 +56,4 @@ const Logo = ({ logout }) => {
 }
 
 
-export default Logo
+export default Logo;

@@ -40,10 +40,7 @@ function Register() {
             }
         ).catch(
             error => console.error(error)
-            
-            
         )
-
     }
 
 
@@ -54,14 +51,9 @@ function Register() {
 
                 <form onSubmit={handleSubmitRegister}>
                     <input type="text" value={name} onChange={handleName} />
-                    {/* <input type="email" value={email} onChange={handleEmail} /> */}
                     <input type="password" value={password} onChange={handlePassword} />
-                    {/* <input type="password" value={passwordConfirm} onChange={handlePasswordConfirm} /> */}
-
                     <input type="submit" />
                 </form>
-
-
             </div>
         </>
     );

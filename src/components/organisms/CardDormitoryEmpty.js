@@ -13,13 +13,13 @@ grid-template-rows:30% 1fr;
 justify-content:center;
 align-content:center;
 text-align:center;
-`
+`;
+
 const StyledInput = styled(Input)`
     width: 260px;
-`
+`;
 
-
-const CardDormitoryEmpty = ({ dispatchDormitorys, hand }) => {
+const CardDormitoryEmpty = ({ dispatchDormitorys}) => {
 
     const [dormitoryName, setDormitoryName] = useState('')
 
@@ -55,9 +55,8 @@ const CardDormitoryEmpty = ({ dispatchDormitorys, hand }) => {
                 ) : (
                     <div style={{ fontSize: '150px' }} >+</div>
                 )}
-
         </StyleWrapper>
     )
 }
 
-export default CardDormitoryEmpty
+export default CardDormitoryEmpty;

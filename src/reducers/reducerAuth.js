@@ -2,7 +2,6 @@ function reducerAuth(state, action) {
 
   switch (action.type) {
     case 'LOGOUT':
-
       localStorage.setItem('token', '')
       window.location.href = "/login";
       return {

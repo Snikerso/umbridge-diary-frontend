@@ -4,22 +4,22 @@ import { ReactComponent as Feather } from 'assets/feather.svg';
 
 
 const StyledWrapper = styled.div`
-display:flex;
-flex-direction:row;
-flex-basis:100%;
-align-items:center;
-margin-bottom:30px;
->:nth-child(2){
-    margin-left:20px;
-.a{
-    fill:${props => props.theme.primary};
-}
-}
-`
+    display:flex;
+    flex-direction:row;
+    flex-basis:100%;
+    align-items:center;
+    margin-bottom:30px;
+    >:nth-child(2){
+        margin-left:20px;
+        .a{
+            fill:${props => props.theme.primary};
+        }
+    }
+`;
 const Head = styled.h1`
     color: ${props => props.theme.primary};
     font-size:50px;
-`
+`;
 
 
 const UserInfoHead = () => {
@@ -31,10 +31,9 @@ const UserInfoHead = () => {
                 <Head >User Info</Head >
                 <Feather width={60} />
             </StyledWrapper>
-
         </>
 
     )
 }
 
-export default UserInfoHead
+export default UserInfoHead;

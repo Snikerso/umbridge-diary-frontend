@@ -10,19 +10,19 @@ import { themeGryffindor, slytherinTheme } from 'theme/MainTheme'
 function MainTemplate({ children }) {
     const [themes, setTheme] = useState('gryffindor');
 
-    const themeToggler = () => {
-        themes === 'gryffindor' ? setTheme('slytherin') : setTheme('gryffindor')
-        themes === 'gryffindor' ? localStorage.setItem('theme','slytherin') : localStorage.setItem('theme','gryffindor')
-    }
+    // const themeToggler = () => {
+    //     themes === 'gryffindor' ? setTheme('slytherin') : setTheme('gryffindor')
+    //     themes === 'gryffindor' ? localStorage.setItem('theme','gryffindor') : localStorage.setItem('theme','gryffindor')
+    // }
     useEffect(() => {
-        const localTheme = window.localStorage.getItem('theme');
-        setTheme(localTheme)
+        // const localTheme = window.localStorage.getItem('theme');
+        // setTheme(localTheme)
     }, []);
 
 
     return (
         <>
-            <themeContext.Provider value={{ themes, themeToggler }} >
+            <themeContext.Provider value={{ themes }} >
                 <GlobalStyle />
                 <ThemeProvider theme={themes === 'gryffindor' ? themeGryffindor : slytherinTheme }>
                     {children}
@@ -34,7 +34,5 @@ function MainTemplate({ children }) {
 
 
 }
-MainTemplate.propTypes = {
-    children: PropTypes.element.isRequired,
-}
+
 export default MainTemplate

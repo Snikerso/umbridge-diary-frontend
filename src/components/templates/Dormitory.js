@@ -1,10 +1,10 @@
-import React, { useContext } from 'react'
-import styled from 'styled-components'
-import magContext from 'contexts/magContext'
-import dormitoryContext from 'contexts/dormitoryContext'
-import CardDormitory from 'components/organisms/CardDormitory'
-import DormitoryHead from 'components/molecules/DormitoryHead'
-import CardDormitoryEmpty from 'components/organisms/CardDormitoryEmpty'
+import React, { useContext } from 'react';
+import styled from 'styled-components';
+import magContext from 'contexts/magContext';
+import dormitoryContext from 'contexts/dormitoryContext';
+import CardDormitory from 'components/organisms/CardDormitory';
+import DormitoryHead from 'components/molecules/DormitoryHead';
+import CardDormitoryEmpty from 'components/organisms/CardDormitoryEmpty';
 
 
 const StyledWrapper = styled.div`
@@ -13,8 +13,7 @@ const StyledWrapper = styled.div`
     align-content:space-between;
     justify-content:space-between;
     margin:40px;
-
-`
+`;
 
 const Dormitory = () => {
 
@@ -41,4 +40,4 @@ const Dormitory = () => {
     )
 }
 
-export default Dormitory
+export default Dormitory;

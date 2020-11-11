@@ -37,8 +37,7 @@ const StyledPlus = styled(Add)`
             fill:green;
         }
     }
-
-`
+`;
 
 const StyledMinus = styled(Minus)`
     .a{
@@ -50,8 +49,7 @@ const StyledMinus = styled(Minus)`
             fill:red;
         }
     }
-
-`
+`;
 
 const MagItem = ({ item, handleMagScoreAdd, handleMagScoreMinus, handleMagDelete, dispatchMag }) => {
 
@@ -72,9 +70,8 @@ const MagItem = ({ item, handleMagScoreAdd, handleMagScoreMinus, handleMagDelete
                 )}
 
             <Delete width={30} onClick={() => handleMagDelete(item)} />
-
         </StyleWrapper>
     )
 }
 
-export default MagItem
+export default MagItem;

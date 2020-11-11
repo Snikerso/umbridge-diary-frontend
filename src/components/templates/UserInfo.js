@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import Input from 'components/atoms/Input';
 import Button from 'components/atoms/Button';
-import UserInfoHead from 'components/molecules/UserInfoHead'
+import UserInfoHead from 'components/molecules/UserInfoHead';
 
 
 const StyleWrapper = styled.div`
@@ -30,7 +30,6 @@ const UserInfo = () => {
         <>
             <StyleWrapper>
                 <UserInfoHead />
-
                 <div>
                     <Head>User Info</Head>
                     <Input placeholder="change name" />
@@ -39,13 +38,10 @@ const UserInfo = () => {
                     <Head>Password</Head>
                     <Input placeholder="change password" />
                 </div>
-                
                 <Button>Edit</Button>
-
             </StyleWrapper>
-
         </>
     )
 }
 
-export default UserInfo
+export default UserInfo;

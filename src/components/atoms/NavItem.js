@@ -35,7 +35,7 @@ const StyledWrapper = styled.div`
 `
 
 
-const Header = ({ icon }) => {
+const NavItem = ({ icon }) => {
 
     return (
         <>
@@ -76,4 +76,4 @@ const Header = ({ icon }) => {
     )
 }
 
-export default Header
+export default NavItem;

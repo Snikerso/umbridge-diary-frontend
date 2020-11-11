@@ -16,7 +16,7 @@ const StyleWrapper = styled.div`
     margin:10px;
     border-radius:20px;
     justify-content:center;
-`
+`;
 
 const Head = styled.h1`
     align-self:center;
@@ -24,7 +24,7 @@ const Head = styled.h1`
     text-align:center;
     margin-top:25px;
     color:${props => props.theme.primary};
-`
+`;
 
 const InnerWrapper = styled.div`
     margin:10px;
@@ -32,13 +32,13 @@ const InnerWrapper = styled.div`
     flex-wrap:wrap;
     flex-direction:row;
     justify-content:space-between;
-`
+`;
 
 const StyledWrapperSelect = styled.div`
     flex-basis:100%;
     display:flex;
     align-items:center;
-`
+`;
 
 const StyledWrapperMag = styled.div`
     display:flex;
@@ -50,15 +50,14 @@ const StyledWrapperMag = styled.div`
     justify-content:space-between;
     width:120px;
     margin:3px;
-
-`
+`;
 
 const MagicScoreSum = styled.h1`
     font-family: Roboto;
     font-size:45px;
     color:${props => props.theme.green};
     margin-right:100px;
-`
+`;
 
 const StyledDelete = styled(Delete)`
     width:30px;
@@ -75,7 +74,7 @@ const StyledDelete = styled(Delete)`
             fill:red;
         }
     }
-`
+`;
 
 const CardDormitory = ({ dormitory, dispatchDormitorys, stateMag }) => {
 
@@ -107,11 +106,8 @@ const CardDormitory = ({ dormitory, dispatchDormitorys, stateMag }) => {
         }).then(res => {
 
             dispatchDormitorys({ type: 'DeleteMagDormitory', item, dormitory })
-
         })
-
-
-    }
+    };
 
     const handleAddMagToDormitory = (item) => {
 
@@ -131,9 +127,8 @@ const CardDormitory = ({ dormitory, dispatchDormitorys, stateMag }) => {
             dispatchDormitorys({ type: 'AddMagToDormitory', mag, dormitory })
 
         })
+    };
 
-
-    }
     const handleDeleteDormitory = () => {
 
         fetch(`${process.env.REACT_APP_API_URL}/api/dormitorys/${dormitory.id}/`, {
@@ -145,9 +140,8 @@ const CardDormitory = ({ dormitory, dispatchDormitorys, stateMag }) => {
         }).then(res => {
             let dormitoryid = dormitory.id
             dispatchDormitorys({ type: 'DeleteDormitory', dormitoryid })
-
         })
-    }
+    };
 
 
     return (
@@ -157,7 +151,6 @@ const CardDormitory = ({ dormitory, dispatchDormitorys, stateMag }) => {
                 <Head>{dormitory.title}</Head>
                 <StyledDelete onClick={() => handleDeleteDormitory()} />
             </div>
-
             <InnerWrapper>
 
                 <StyledWrapperSelect>
@@ -171,30 +164,24 @@ const CardDormitory = ({ dormitory, dispatchDormitorys, stateMag }) => {
                     </Select>
                     <Plus onClick={() => { handleAddMagToDormitory(magSelect) }} />
                 </StyledWrapperSelect>
-
                 <div>
                     {dormitory.mags.map(item => (
                         <>
-
                             <StyledWrapperMag key={item.id} >
                                 <div> {item.title}</div>
                                 <Minus width={20} onClick={() => { handleDeleteMagFromDormitory(item) }} />
                             </StyledWrapperMag>
-
                         </>
                     ))}
                 </div>
 
                 <div>
                     <MagicScoreSum>{magicscoresum}</MagicScoreSum>
-
                 </div>
             </InnerWrapper>
-
-
         </StyleWrapper>
     )
-}
+};
 
 
-export default CardDormitory
+export default CardDormitory;

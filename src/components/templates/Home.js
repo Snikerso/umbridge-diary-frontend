@@ -1,55 +1,58 @@
 import React from 'react';
 import styled from 'styled-components';
-import ImageMags from 'assets/magician.jpg'
-import ImageDormitories from 'assets/dormitories.jpg'
+import ImageMags from 'assets/magician.jpg';
+import ImageDormitories from 'assets/dormitories.jpg';
 
 
 const StyledWrapper = styled.div`
-    display: grid;
+    display: flex;
+    flex-direction:column;
     grid-template-columns: 1fr;
-    justify-items:center;
-    margin:40px;
+    justify-content:center;
+    width:100%;
+    margin:40px auto;
+
 
     p{
        font:  14px/31px Roboto;
     }
-`
+`;
 
 const StyledWrapperItem = styled.div`
     display: flex;
     flex-wrap:wrap;
     flex-direction:row;
-    justify-content:left;
-    margin-top:30px;
-    margin-bottom:30px;
-
-
->:nth-child(1){
-    flex-basis:100%;
-    margin-bottom:30px;    
+    justify-content:center;
+    margin: 50px auto;
+    p {font:  18px Roboto;}
+h1{
+    margin-left:50px;
 }
 
->:nth-child(2){
-    background-color:green;
-}
 
->:nth-child(3){
-    flex-basis:50%;
-    align-self:center;
-    justify-self:center;
-    margin-left:36px;
-}
-`
+    >:nth-child(1){
+        flex-basis:100%;
+        margin-bottom:30px;    
+    }
+
+
+    >:nth-child(3){
+        flex-basis:50%;
+        align-self:center;
+        justify-self:center;
+        margin-left:36px;
+    }
+`;
 const Head = styled.div`
     text-align:center;
     font-size:21px;
 
-    p {font:  19px/31px Roboto;}
+    p {font:  24px Roboto;}
 
     >*{
         margin-bottom:20px;
     }
-`
+`;
 
 const Img = styled.div`
     width: 344px;
@@ -61,14 +64,13 @@ const Img = styled.div`
     background-position: content; 
     background-repeat: no-repeat;
     background-size: cover;     
-`
+`;
 
 
 const Home = () => {
 
     return (
         <>
-
             <StyledWrapper>
                 <Head>
                     <h1>Welcome to Mrs. Umbridge's diary !</h1>
@@ -85,9 +87,8 @@ const Home = () => {
                     <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</p>
                 </StyledWrapperItem>
             </StyledWrapper>
-
         </>
     )
 }
 
-export default Home
+export default Home;

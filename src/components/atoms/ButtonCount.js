@@ -1,5 +1,4 @@
-
-import styled, { css } from 'styled-components'
+import styled, { css } from 'styled-components';
 
 const ButtonCount = styled.button`
   width: 25px;
@@ -27,8 +26,6 @@ const ButtonCount = styled.button`
       background-color:  ${props => props.theme.primary};
     }
   `}
-
-
 
   ${({ unpresent }) => unpresent && css`
     position:relative;

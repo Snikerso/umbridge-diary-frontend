@@ -1,5 +1,5 @@
-import { createGlobalStyle } from 'styled-components'
-import HarryFont from 'assets/harryfont.TTF'
+import { createGlobalStyle } from 'styled-components';
+import HarryFont from 'assets/harryfont.TTF';
 
 const GlobalStyles = createGlobalStyle`
 
@@ -20,7 +20,7 @@ const GlobalStyles = createGlobalStyle`
     body{
         font-size:1.6rem;
         margin:0;    
-        font-family: harry
+        font-family: harry;
     }
 
     `;

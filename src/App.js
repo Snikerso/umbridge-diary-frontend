@@ -17,7 +17,6 @@ import Home from './components/templates/Home';
 import MainTemplate from 'templates/MainTemplate';
 import Header from 'components/molecules/Header';
 
-//http://recharts.org/en-US/api/ComposedChart
 
 
 function App() {
